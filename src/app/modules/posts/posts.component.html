@@ -3,10 +3,11 @@
 <BR>
  
     <br>
-<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
     <!-- Position Column -->
+
     <ng-container matColumnDef="position">
-      <mat-header-cell *matHeaderCellDef> Rubrique. </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Rubrique </mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
     </ng-container>
   
@@ -27,8 +28,8 @@
       <mat-header-cell *matHeaderCellDef> Revenue estimé </mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
     </ng-container>
+    
   
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
-  

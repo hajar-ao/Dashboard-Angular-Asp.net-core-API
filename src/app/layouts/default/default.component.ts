@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import{SharedService} from 'src/app/shared.service';
 @Component({
   selector: 'app-default',
   templateUrl: './default.component.html',
@@ -8,11 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class DefaultComponent implements OnInit {
 
   sideBarOpen=true;
-  constructor() { }
+  constructor(private service:SharedService) {
 
-  ngOnInit(): void {}
+   }
+
+  OpportinitiesList:any=[];
+  ngOnInit(): void {
+    this.refreshOppList();
+  }
   sideBarToggler(){
     this.sideBarOpen=!this.sideBarOpen;
+  }
+  refreshOppList(){
+    this.service.opportunities().subscribe(data=>{
+      this.OpportinitiesList=data;
+    });
   }
 
 }

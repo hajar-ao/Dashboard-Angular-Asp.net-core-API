@@ -9,12 +9,19 @@ import{MatSidenavModule} from'@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import{MatCardModule} from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ComptesComponent } from 'src/app/modules/comptes/comptes.component';
+
+
 
 @NgModule({
   declarations: [
     DefaultComponent,
     DashboardComponent,
-    PostsComponent
+    PostsComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -24,6 +31,10 @@ import{MatCardModule} from '@angular/material/card';
     MatDividerModule,
     FlexLayoutModule,
     MatCardModule,
+    HttpClientModule ,
+    FormsModule,
+    ReactiveFormsModule,
+    
   ]
 })
 export class DefaultModule { }

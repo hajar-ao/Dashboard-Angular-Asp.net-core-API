@@ -10,6 +10,8 @@ import { ComponentTableComponent } from './component-table/component-table.compo
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { ContactComponent } from './modules/contact/contact.component';
+import { ComptesComponent } from './modules/comptes/comptes.component';
 
 
 
@@ -17,6 +19,8 @@ import { MatSortModule } from '@angular/material/sort';
   declarations: [
     AppComponent,
     ComponentTableComponent,
+    ContactComponent,
+    ComptesComponent,
  
  
   ],
